@@ -1,0 +1,40 @@
+@HOST = http://localhost:3600
+@AUTH = authtoken
+@TESTID = 62af29df87ec3b124231f76c
+
+POST {{HOST}}/company HTTP/1.1
+content-type: application/json
+
+{
+"name" : "Central Hospital",
+"contactNumber" : "61092999999",
+"email" : "contact@Radient.com",
+"address" : "34 Dhanmondi Street",
+"postcode" : "1205",
+"state" : "Penang",
+"status" : 1,
+"rating" : 4.0
+}
+        
+       
+###
+
+GET {{HOST}}/company?name=azad HTTP/1.1
+
+        
+###
+GET {{HOST}}/company/{{TESTID}} HTTP/1.1
+
+        
+###
+
+PATCH {{HOST}}/company/{{TESTID}} HTTP/1.1
+content-type: application/json
+        
+{
+"rating" : 4
+}
+###
+DELETE {{HOST}}/company/{{TESTID}} http/1.1
+ 
+            

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+:root {
+  --primary-color: #29334F;
+  --green: #3AEBB6;
+  --background-color: hsla(180, 21%, 94%, 0.89);
+  --filter-table: hsl(180, 31%, 95%);
+  --dark-greyish: hsl(180, 8%, 52%);
+  --very-dark-greyish: hsl(180, 14%, 20%);
+  --Montserrat: 'Montserrat', sans-serif;  
+  --header-font: 'Montserrat', sans-serif;
+  --body-font-size:17px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: var(--body-font-size);
+  font-weight: 500;
+  box-sizing: border-box;
+  color: var( --dark-greyish);
+}
+
+body {
+  font-family: var( --Montserrat) !important;
+  font-size: var(--body-font-size)!important;
+  color: var(--dark-greyish)  !important;
+  background-color: var( --background-color);
+}
+.title, h1 {
+  font-family: var(--Montserrat);
+  font-weight: 700 !important;
+  font-size: 1.363rem !important;
+  color: var(  --primary-color) !important;
+}
+.subtitle, h2 {
+  font-family: var(--Montserrat) !important;
+  font-weight: 500 !important;
+  color: var( --primary-color) !important;
+  font-size: 1.163rem !important;
+}
+
+.card {
+background-color: white !important;
+}
+.btn-custom{
+  background-color: var(--primary-color)!important;
+  color: white!important;
+}
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+
+

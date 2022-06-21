@@ -1,0 +1,32 @@
+@HOST = http://localhost:3600
+@AUTH = authtoken
+@TESTID = testID
+@SHIFT_ID=
+POST {{HOST}}/invite HTTP/1.1
+content-type: application/json
+        
+        {
+        "userId" : "kazad79@gmail.com",
+        "shiftId" :"62b12088d0074c034e25ef5d"
+        }
+        
+###
+GET {{HOST}}/invite? HTTP/1.1
+        
+###
+GET {{HOST}}/invite/{{TESTID}} HTTP/1.1
+
+        
+###
+PATCH {{HOST}}/invite/{{TESTID}} HTTP/1.1
+content-type: application/json
+
+{
+        "userId" : "jZaax9C1IX",
+"shiftId" : "3YN6vDTt5q",
+"insertTime" : 1
+}
+###
+DELETE {{HOST}}/invite/{{TESTID}} http/1.1
+Authorization: Bearer {{AUTH}} 
+            

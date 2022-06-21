@@ -1,0 +1,39 @@
+@HOST = http://localhost:3600
+@AUTH = authtoken
+@TESTID = 62af2da780cb2613c41cf75f
+POST {{HOST}}/shift HTTP/1.1
+content-type: application/json
+        
+        {
+        "companyId" : "62b11f80d0074c034e25ef51",
+        "date" : "2022-06-28",
+        "startTime": 1656385200000 ,
+        "endTime" : 1656352800000,
+        "department" : "Care unit ",
+        "details" : "care in ",
+        "status" : 1,
+        "rate":55.25
+        }
+        
+###
+GET {{HOST}}/shift?department=child HTTP/1.1
+Authorization: Bearer {{AUTH}}
+        
+###
+GET {{HOST}}/shift/{{TESTID}} HTTP/1.1
+Authorization: Bearer {{AUTH}}
+        
+###
+PATCH {{HOST}}/shift/{{TESTID}} HTTP/1.1
+content-type: application/json
+
+{
+
+"rate" : 30.75,
+}
+###
+DELETE {{HOST}}/shift/{{TESTID}} http/1.1
+Authorization: Bearer {{AUTH}} 
+
+###
+GET {{HOST}}/shiftdump HTTP/1.1

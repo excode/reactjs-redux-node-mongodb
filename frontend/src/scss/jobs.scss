@@ -1,0 +1,23 @@
+.drak_round {
+	background: var(--very-dark-greyish);
+	border-radius: 10px 0px 0px 10px;
+    width: 10px;
+    height: 100%;
+}
+
+.light_round {
+	background: var(--green);
+	border-radius: 10px 0px 0px 10px;
+    width: 10px;
+    height: 100%;
+}
+.rounded{
+    background: var(--dark-greyish);
+	border-radius: 10px 10px 10px 10px;
+}
+.full{
+    width: 100% !important;
+}
+.full1{
+    width: 98% !important;
+}
