@@ -17,7 +17,7 @@ npm start<br />
 ## frontend: reactjs bootstrap
 
 
-TO run the frontend go to  <br />
+TO run the frontend open new command/shell window and type  <br />
 cd frontend <br />
 npm i <br />
 npm run start <br />

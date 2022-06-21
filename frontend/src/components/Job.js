@@ -2,24 +2,24 @@ import React from "react";
 import moment from 'moment'
 import Company from "./Company";
 const Job = (props) => {
+ 
   const {
     date,
     startTime,
     endTime,
     rate,
-    rating,
-    insertTime,
     companyId,
-    department,
-    details
-
+    department
   } = props.data;
   
-  let dateFormat = moment(date).format('ddd Do MMM');
-  let start = moment(startTime).format('h:mm a');
+  let dateFormat = moment(date).format('ddd Do MMM');// DATE FORMAT
+  let start = moment(startTime).format('h:mm a'); ;// TIME FORMAT
   let end = moment(endTime).format('h:mm a');
-  let isInvited = props.isInvited==undefined?false: props.isInvited;
 
+  //CHECK weather it is in invitation List 
+  let isInvited = props.isInvited==undefined?false: props.isInvited;  
+ 
+ 
   let shiftId= props.shiftId;
   let inviteId= props.inviteId==undefined?'':props.inviteId;
   

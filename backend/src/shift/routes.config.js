@@ -9,7 +9,7 @@ const FREE = config.permissionLevels.NORMAL_USER;
 
 exports.routesConfig = function (app) {
     app.post('/shift', [
-      ValidationMiddleware.validJWTNeeded,
+      ValidationMiddleware.validJWTNeeded, // DISABLED in REAL situation it will middleware to validation users
 
       PermissionMiddleware.minimumPermissionLevelRequired(USER),
       ShiftController.insert

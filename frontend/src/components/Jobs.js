@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Job from "./Job";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { selectLoading, selectPageNo, selectPerpage, selectShifts, selectTotal } from "../slices/shift";
 import { selectInviteLoading,selectInvites } from "../slices/invite";
 import ReactPaginate from 'react-paginate';
 import {
-  fetchShift,
-  updateShift,
-  deleteShift,
+  fetchShift
 } from "../slices/shift";
 import {
   fetchInvite,
@@ -28,7 +25,9 @@ const inviteEntities = useSelector(selectInvites);
 const inviteLoading = useSelector(selectInviteLoading);
 
   useEffect(() => {
+  // FETCHING ALL Shifta data
    dispatch(fetchShift())
+   // FETCHING ALL Invitation data
    dispatch(fetchInvite())
   },[]);
 
@@ -38,7 +37,7 @@ const inviteLoading = useSelector(selectInviteLoading);
     console.log(e)
    if(!e.isActive){
      let page=e.nextSelectedPage;
-     console.log('current_pa',page)
+      // FETCHING specefic  page data
      dispatch(fetchShift({page:page}))
    }
    
@@ -62,6 +61,7 @@ const inviteLoading = useSelector(selectInviteLoading);
       <h2>Loading .....</h2>
     ):(
     <div class="panel">
+      {/*  PAgination */}
       <ReactPaginate
        className="pagination justify-content-center"
        pageClassName="page-item"

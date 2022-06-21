@@ -8,15 +8,10 @@ import {
 const Company = (props) => {
   const {
     name,
-    contactNumber,
-    email,
     rating,
     address,
     postcode,
-    state,
-    _id,
-
-
+    state
   } = props.data;
 const dispatch = useDispatch();  
 const shiftId =props.shiftId;
@@ -41,11 +36,11 @@ const isInvited =props.isInvited;
         <div class="col-lg-7">
         <h5 class="card-title">{name}</h5>
         <ReactStars
-    count={5}
-    size={20}
-    value={rating}
-    activeColor="#ffd700"
-  />
+        count={5}
+        size={20}
+        value={rating}
+        activeColor="#ffd700"
+    />
         <p class="card-text">{address}<br/>
         {postcode}  {state}
         </p>
@@ -61,10 +56,10 @@ const isInvited =props.isInvited;
          <a href="#" class="btn btn-custom mx-2">Apply</a>
          </>
             ):(
-<>
-<a href="#" class="btn btn-danger mx-2" onClick={declineInvitation}>Decline</a>
-<a href="#" class="btn btn-custom mx-2">Apply</a>
-</>
+        <>
+        <a href="#" class="btn btn-danger mx-2" onClick={declineInvitation}>Decline</a>
+        <a href="#" class="btn btn-custom mx-2">Apply</a>
+        </>
             )}
          
          </p>

@@ -3,7 +3,7 @@ import {Server} from '../config';
 
 
 async function sendRequest(path,method,data,header) {
-    console.log("AZAD 2232")
+  
     const config = {
         method: method,
         url: Server.url+path,
@@ -12,7 +12,7 @@ async function sendRequest(path,method,data,header) {
         config['data'] =data;
 
     }
-    console.log("AZAD 2222")
+    
     // BY DEFAULT HEADER WILL BE EMPTY
     // SKIPED ALL AUTH  SO HEADER WILL BE EMPTY
    if(header!=undefined){

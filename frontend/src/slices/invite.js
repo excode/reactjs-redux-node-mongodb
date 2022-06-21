@@ -62,7 +62,8 @@ const InviteSlice = createSlice({
         state.loading =true
     })
     .addCase(AddInvite.fulfilled, (state, action) => {
-      //console.log("))))@@@#@@#@#")
+      // Add  the  ITEM in  state
+      // no need to call API and fetch from remote
        state.entities = [ action.payload,...state.entities];
       // console.log(state.entities);
         state.loading =false;
@@ -79,7 +80,8 @@ const InviteSlice = createSlice({
         state.loading =true;
     })
     .addCase(deleteInvite.fulfilled, (state, action) => {
-      console.log("DELETE =>")
+        // Remove  the  ITEM From state
+        // no need to call API and fetch from remote
         state.entities =state.entities.filter(e=>e._id!=action.payload)
         state.loading =false;
      })

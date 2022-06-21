@@ -8,6 +8,8 @@ export const fetchShift= createAsyncThunk(
   
    
     var queryString =data!=undefined? Object.keys(data).map(key => key + '=' + data[key]).join('&'):''; 
+     // {name:azad,date:2022-12-12} will be became name=azad&date=022-12-12
+     
     const response = await api('/shift?'+queryString,'get',DataTransferItem);
    
     return response.data
@@ -58,7 +60,7 @@ const ShiftSlice = createSlice({
       state.total =  action.payload.count;
       state.perpage =action.payload.perpage;
       state.loading =false
-      console.log('I AM DONE')
+     
     })
     .addCase(fetchShift.pending, (state) => {
         state.loading =true
