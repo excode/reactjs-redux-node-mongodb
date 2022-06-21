@@ -1,6 +1,7 @@
 import React from "react";
 import moment from 'moment'
 import Company from "./Company";
+import TimeIcon from "./TimeIcon";
 const Job = (props) => {
  
   const {
@@ -15,7 +16,8 @@ const Job = (props) => {
   let dateFormat = moment(date).format('ddd Do MMM');// DATE FORMAT
   let start = moment(startTime).format('h:mm a'); ;// TIME FORMAT
   let end = moment(endTime).format('h:mm a');
-
+  
+  let startHour = moment(startTime).format('H'); ;// START HOUR 
   //CHECK weather it is in invitation List 
   let isInvited = props.isInvited==undefined?false: props.isInvited;  
  
@@ -36,7 +38,7 @@ const Job = (props) => {
     <div class="card full1 shadow-sm ">
      
       <div class="card-body">
-        <h5 class="title">{dateFormat}</h5>
+        <h5 class="title">{dateFormat} <TimeIcon startTime={startHour} /></h5>
         <span>{start} - {end}</span><br/>
         <span>{department}</span>
         <h2>${rate} / hr</h2>
