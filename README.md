@@ -22,4 +22,4 @@ cd frontend <br />
 npm i <br />
 npm run start <br />
 
-##bancked will start on port 3000<br />
+##frontend will start on port 3000<br />
